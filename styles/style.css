@@ -27,5 +27,22 @@
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+/* Basis styling voor mobile-first (357px) */
+body {
+    margin: 0;
+    background-color: white;
+}
 
+ul {
+	display: flex;
+	overflow-y: hidden; /* dit zorgt ervoor dat er geen overvloed is op de y as*/
+	gap: 3rem;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+ul li img {
+	width: 100%;
+}

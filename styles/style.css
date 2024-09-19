@@ -1,13 +1,11 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
-
-
-
-
 
 
 /*********************/
@@ -15,8 +13,8 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #111;
+	--color-background: #eee;
 }
 
 
@@ -29,13 +27,14 @@
 
 /* Basis styling voor mobile-first (357px) */
 body {
-    margin: 0;
-    background-color: white;
+	margin: 0;
+	background-color: white;
 }
 
 ul {
 	display: flex;
-	overflow-y: hidden; /* dit zorgt ervoor dat er geen overvloed is op de y as*/
+	overflow-y: hidden;
+	/* dit zorgt ervoor dat er geen overvloed is op de y as*/
 	gap: 3rem;
 }
 

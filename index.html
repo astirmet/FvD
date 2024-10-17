@@ -3,24 +3,31 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="author" content="Mehmet demirsoy">
+	<meta name="author" content="Mehmet Demirsoy">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Gymshark</title>
 
+	<!-- verbidning naar me stylesheet -->
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link href="styles/home.css" rel="stylesheet">
+	<link href="styles/collection.css" rel="stylesheet">
+	<!-- icon wat je links boven ziet bij je tablad -->
+	<link rel="icon" type="image/svg+xml" href="images/gs-icon-black.svg">
 </head>
 
 <body>
-
+	<!-- in de HEADER zijn er verbintenis knoppen en links naar paginas -->
 	<header>
-		<button><img src="./readme-images/menu.svg" alt="menu"></button>
-		<button><img src="./readme-images/search.svg" alt="search"></button>
-		<a href="index.html"><img src="./readme-images/gs-icon-black.svg" alt="gym-shark-icon"></a>
-		<a href="#"><img src="./readme-images/shopping.svg" alt="shopping-bag"></a>
-		<a href="#"><img src="./readme-images/account.svg" alt="shopping-bag"></a>
+		<!-- <p>10% studentenkorting</p> -->
+		<button><img src="./images/menu.svg" alt="menu"></button>
+		<button><img src="./images/search.svg" alt="search"></button>
+		<a href="index.html"><img src="./images/gs-icon-black.svg" alt="gym-shark-icon"></a>
+		<a href="#"><img src="./images/shopping.svg" alt="Shopping Bag Icon"></a>
+		<a href="#"><img src="./images/account.svg" alt="Account icon"></a>
+		<!-- navigatie menu naar verschillende paginas er moeten nog links komen mehmet (note naar mezelf hihihi)!!! -->
 		<nav>
+			<button>Close</button>
 			<ul>
 				<li><a href="#">TRENDING</a></li>
 				<li><a href="#">LEGGING</a></li>
@@ -31,195 +38,224 @@
 			</ul>
 		</nav>
 	</header>
+	<!-- Dit is de Hoofdsectie! deze sectie heeft wat tekst en links naar verschillende pagina's! 
+	 (dit deelt moet ik goed onderhouden omdat het laat weten wat voor belangrijke dingen ik aanbied voor de site een belangrijke punt is) 
+	 en hier moet ik nog de video aanzetten maar die moet ik nog uitvogelen in css -->
 	<main>
 		<section>
+
 			<h2>Nieuw Seizoen + nieuwe artikelen = meer vooruitgang</h2>
 			<a href="https://nl.gymshark.com/collections/new-releases">Bekijk alles</a>
 			<a href="https://nl.gymshark.com/collections/new-releases/womens?banner_id=hp-apex-gfx-dual-cta1">Dames</a>
 			<a href="https://nl.gymshark.com/collections/new-releases/mens?banner_id=hp-apex-gfx-dual-cta2">Heren</a>
-			<!-- <video controls height="600" width="300" src="/readme-images/video.mp4" alt="video van mensen die gymkleidng aan hebben"> -->
+			<video autoplay muted loop controls height="600" width="100%" src="./images/video.mp4"
+				alt="video van mensen die gymkleidng aan hebben"></video>
+		</section>
 
-
-			<!-- <section>
-			<h2>Nieuwe artikelen</h2>
-			<a href="https://nl.gymshark.com/collections/new-releases">bekijk alles</a>
+		<section>
+			<!-- hier illustreer ik de prodcuten die beschikbaar zijn bij de website met wat afbeeldingen en beschrijvingen erbij en dit gaat via listitems 
+			 en dit is express in een listitem gezet omdat dit WEL in een volgorde word geillustreerd! maar je moet een UL eerst hebben zodat je een container kan maken!-->
 			<ul>
 				<li>
-					<img src="readme-images/img1.webp" alt="sport short">
-					<h3>apex contranst short</h3>
-					<h4>black brushed</h4>
-				</li>
-				<li>
-					<img src="readme-images/IMG3.webp" alt="Britse ijzer t-shirt">
-					<h3>extreem oversized fit</h3>
-					<h4>black </h4>
-				</li>
-				<li>
-				<img src="readme-images/img5.webp" alt="Britse ijzer hoodie">
-				<h3>oversized fit</h3>
-				<h4>slate steal</h4>
-			</li>
-				<li>
-					<img src="readme-images/img7.webp" alt="Apex sport bh">
-					<h3>black brushed grey</h3>
-					<h4></h4>
-				</li>
-				<li>
-					<img src="readme-images/img9.jpg" alt="Ijzer plaat t-shirt">
-					<h3>extreme oversized fit</h3>
-					<h4>black</h4>
-				</li>
-			</ul>
-		</section> -->
-
-			<ul>
-				<li>
-					<img src="./readme-images/img1.webp" alt="Korte sport short">
+					<img src="./images/img1.webp" alt="Korte sport short">
 					<h3>Apex contranst short</h3>
 					<h4>Black brushed </h4>
 				</li>
 				<li>
-					<img src="./readme-images/img3.webp" alt="Britse ijzer t-shirt">
+					<img src="./images/img3.webp" alt="Britse ijzer t-shirt">
 					<h3>Extreem oversized fit</h3>
 					<h4>Black</h4>
 				</li>
 				<li>
-					<img src="./readme-images/img5.webp" alt="Britse ijzer hoodie">
+					<img src="./images/img5.webp" alt="Britse ijzer hoodie">
 					<h3>Oversized fit</h3>
 					<h4>Slate steal </h4>
 				</li>
 				<li>
-					<img src="./readme-images/img7.webp" alt="Apex sport bh">
+					<img src="./images/img7.webp" alt="Apex sport bh">
 					<h3>black brushed grey</h3>
 					<h4></h4>
 				</li>
 				<li>
-					<img src="./readme-images/img9.jpg" alt="Ijzer plaat t-shirt">
+					<img src="./images/img9.jpg" alt="Ijzer plaat t-shirt">
 					<h3>Extreme <span lang="en">oversized></span></h3>
 					<h4>Black</h4>
 				</li>
 			</ul>
+		</section>
+
+		<!-- Favorieten sectie (nog onderhouden goed!) -->
+		<h2>De favorieten van dit moment</h2>
+		<button>Dames</button>
+		<button>Heren</button>
+
+		<!-- Mijn lijst met de producten die ik aanbied door hulp van foto's en een beschrijving erbij -->
+		<ul>
+			<li>
+				<img src="./images/img11.avif" alt="Korte sport short">
+				<h3>sport bh's</h3>
+				<p>Van light support om in te liften tot high support om in te HIIT’en: deze sport-bh’s passen beter
+					bij je dan je ex.</p>
+				<a href="https://nl.gymshark.com/collections/sports-bras/womens?banner_id=hp-sports-bra-cta1">Dames</a>
+			</li>
+			<li>
+				<img src="./images/img12.avif" alt="Britse ijzer t-shirt">
+				<h3>fits voor een nieuwe begin</h3>
+				<p>Van de collegebanken tot aan het bankdrukken: ga voor een frisse start met een nieuwe fit.</p>
+				<a href="https://nl.gymshark.com/pages/back-to-school?banner_id=hp-bts">Shop nu</a>
+			</li>
+			<li>
+				<img src="./images/img13.avif" alt="Britse ijzer hoodie">
+				<h3>Wij hebben ze gedipt. Je zult ze heerlijk vinden</h3>
+				<p>De Lifting Dipped Waistband-leggings zijn populair. Haal ze nu ze er nog zijn. </p>
+				<a href="https://nl.gymshark.com/products/gymshark-lifting-dipped-waistband-leggings-black-aw24">Shop
+					nu</a>
+			</li>
+			<li>
+				<img src="./images/img14.avif" alt="Apex sport bh">
+				<h3>Klaar voor de start</h3>
+				<p>In onze functional fits ben je helemaal klaar om al je functional fitness races te smashen.</p>
+				<a href="https://nl.gymshark.com/collections/functional-fitness/womens">Shop nu</a>
+			</li>
+			<li>
+				<img src="./images/img15.avif" alt="Ijzer plaat t-shirt">
+				<h3>Prachtig & monochromatisch</h3>
+				<p>Ga knallen in het krachthonk in een tijdloze outfits.</p>
+				<a href="https://nl.gymshark.com/collections/trending/womens">Shop nu</a>
+			</li>
+			<li>
+				<img src="./images/img16.avif" alt="Ijzer plaat t-shirt">
+				<h3>Boost je billen</h3>
+				<p>Zorg dat je billen extra goed uitkomen door de flatterende details van onze leggings en shorts.
+				</p>
+				<a
+					href="https://nl.gymshark.com/collections/scrunch-bum-shorts/womens?banner_id=hp-glute-boost">Dames</a>
+			</li>
+			<li>
+				<img src="./images/img17.avif" alt="Ijzer plaat t-shirt">
+				<h3>Accesoires</h3>
+				<p>Het zit ‘m in de kleine dingen. Deze accessoires ondersteunen je terwijl je aan je volgende PB
+					werkt.</p>
+				<a href="https://nl.gymshark.com/collections/accessories?banner_id=hp-accessories-cta1">Dames</a>
+			</li>
+			<li>
+				<img src="./images/img18.avif" alt="Ijzer plaat t-shirt">
+				<h3>Bigger the graphic, better the workout </h3>
+				<p>Grab a graphic baby tee and lift like you mean it.</p>
+				<a href="https://nl.gymshark.com/collections/baby-tees">Shop nu</a>
+			</li>
+			<li>
+				<img src="./images/img19.avif" alt="Ijzer plaat t-shirt">
+				<h3>Vital seamless</h3>
+				<p>Van werk tot workout: de zweetafvoerende en seamless designs van Vital staan voor je klaar.
+					Ervaar zelf hoe het is om alles in Vital te doen.</p>
+				<a
+					href="https://nl.gymshark.com/collections/vital-seamless/womens?banner_id=hp-vital-seamless">Dames</a>
+			</li>
+		</ul>
 
 
-			<h2>De favorieten van dit moment</h2>
-			<button>Dames</button>
-			<button>Heren</button>
+
+		<h2>Hoe ziet jouw training eruit?</h2>
+		<ul>
+			<li>
+				<video autoplay muted loop controls width="100%" src="./images/LEGGINGS_PLP_-_LIFTING_CARD_4x5.mp4"
+					alt="Korte sport short"></video>
+				<h3>Lifting</h3>
+				<a href="https://nl.gymshark.com/collections/sports-bras/womens?banner_id=hp-sports-bra-cta1">Shop
+					nu</a>
+			</li>
+			<li>
+				<video autoplay muted loop controls width="100%" src="./images/MENS_SHORTS_SPEED_15-_4X5.mp4"
+					alt="Korte sport short"></video>
+				<h3>Hardlopen</h3>
+				<a href="https://nl.gymshark.com/collections/running?banner_id=hp-activity-running">Shop nu</a>
+			</li>
+			<li>
+				<video autoplay muted loop controls width="100%" src="./images/LEGGINGS_PLP_-_CLASSES_CARD_4x5.mp4"
+					alt="Korte sport short"></video>
+				<h3>Yoga</h3>
+				<a href="https://nl.gymshark.com/collections/yoga?banner_id=hp-activity-yoga">Shop nu</a>
+			</li>
+			<li>
+				<video autoplay muted loop controls width="100%" src="./images/MENS_SHORTS_STUDIO_15-_4X5.mp4"
+					alt="Korte sport short"></video>
+				<h3>Functionele training</h3>
+				<a
+					href="https://nl.gymshark.com/collections/functional-fitness?banner_id=hp-activity-functional">Shopnu</a>
+			</li>
+		</ul>
 
 
-			<ul>
-				<li>
-					<img src="./readme-images/img11.avif" alt="Korte sport short">
-					<h3>sport bh's</h3>
-					<p>Van light support om in te liften tot high support om in te HIIT’en: deze sport-bh’s passen beter
-						bij je dan je ex.</p>
-					<a
-						href="https://nl.gymshark.com/collections/sports-bras/womens?banner_id=hp-sports-bra-cta1">Dames</a>
-				</li>
-				<li>
-					<img src="./readme-images/img12.avif" alt="Britse ijzer t-shirt">
-					<h3>fits voor een nieuwe begin</h3>
-					<p>Van de collegebanken tot aan het bankdrukken: ga voor een frisse start met een nieuwe fit.</p>
-					<a href="https://nl.gymshark.com/pages/back-to-school?banner_id=hp-bts">Shop nu</a>
-				</li>
-				<li>
-					<img src="./readme-images/img13.avif" alt="Britse ijzer hoodie">
-					<h3>Wij hebben ze gedipt. Je zult ze heerlijk vinden</h3>
-					<p>De Lifting Dipped Waistband-leggings zijn populair. Haal ze nu ze er nog zijn. </p>
-					<a href="https://nl.gymshark.com/products/gymshark-lifting-dipped-waistband-leggings-black-aw24">Shop
-						nu</a>
-				</li>
-				<li>
-					<img src="./readme-images/img14.avif" alt="Apex sport bh">
-					<h3>Klaar voor de start</h3>
-					<p>In onze functional fits ben je helemaal klaar om al je functional fitness races te smashen.</p>
-					<a href="https://nl.gymshark.com/collections/functional-fitness/womens">Shop nu</a>
-				</li>
-				<li>
-					<img src="./readme-images/img15.avif" alt="Ijzer plaat t-shirt">
-					<h3>Prachtig & monochromatisch</h3>
-						<p>Ga knallen in het krachthonk in een tijdloze outfits.</p>
-						<a href="https://nl.gymshark.com/collections/trending/womens">Shop nu</a>
-				</li>
-				<li>
-					<img src="./readme-images/img16.avif" alt="Ijzer plaat t-shirt">
-					<h3>Boost je billen</h3>
-					<p>Zorg dat je billen extra goed uitkomen door de flatterende details van onze leggings en shorts.
-					</p>
-					<a
-						href="https://nl.gymshark.com/collections/scrunch-bum-shorts/womens?banner_id=hp-glute-boost">Dames</a>
-				</li>
-				<li>
-					<img src="./readme-images/img17.avif" alt="Ijzer plaat t-shirt">
-					<h3>Accesoires</h3>
-					<p>Het zit ‘m in de kleine dingen. Deze accessoires ondersteunen je terwijl je aan je volgende PB
-						werkt.</p>
-					<a href="https://nl.gymshark.com/collections/accessories?banner_id=hp-accessories-cta1">Dames</a>
-				</li>
-				<li>
-					<img src="./readme-images/img18.avif" alt="Ijzer plaat t-shirt">
-					<h3>Bigger the graphic, better the workout </h3>
-					<p>Grab a graphic baby tee and lift like you mean it.</p>
-					<a href="https://nl.gymshark.com/collections/baby-tees">Shop nu</a>
-				</li>
-				<li>
-					<img src="./readme-images/img19.avif" alt="Ijzer plaat t-shirt">
-					<h3>Vital seamless</h3>
-					<p>Van werk tot workout: de zweetafvoerende en seamless designs van Vital staan voor je klaar.
-						Ervaar zelf hoe het is om alles in Vital te doen.</p>
-					<a
-						href="https://nl.gymshark.com/collections/vital-seamless/womens?banner_id=hp-vital-seamless">Dames</a>
-				</li>
-			</ul>
-
-
-
-			<h2>Hoe ziet jouw training eruit?</h2>
-			<ul>
-				<li>
-					<img src=".video" alt="Korte sport short">
-					<h3>Lifting</h3>
-					<a href="https://nl.gymshark.com/collections/sports-bras/womens?banner_id=hp-sports-bra-cta1">Shop
-						nu</a>
-				</li>
-				<li>
-					<img src=".video" alt="Korte sport short">
-					<h3>Hardlopen</h3>
-					<a href="https://nl.gymshark.com/collections/running?banner_id=hp-activity-running">Shop nu</a>
-				</li>
-				<li>
-					<img src=".video" alt="Korte sport short">
-					<h3>Yoga</h3>
-					<a href="https://nl.gymshark.com/collections/yoga?banner_id=hp-activity-yoga">Shop nu</a>
-				</li>
-				<li>
-					<img src=".video" alt="Korte sport short">
-					<h3>Functionele training</h3>
-					<a href="https://nl.gymshark.com/collections/functional-fitness?banner_id=hp-activity-functional">Shop
-						nu</a>
-				</li>
-			</ul>
-
-
-			<ul>
-				<li>
-					<img src="/readme-images/img20.avif" alt="Shop dames">
-					<a href="https://nl.gymshark.com/pages/shop-women?banner_id=hp-shop-women-card">Shop dames</a>
-				</li>
-			</ul>
-
-
+		<ul>
+			<li>
+				<img src="./images/img20.avif" alt="Shop dames">
+				<a href="https://nl.gymshark.com/pages/shop-women?banner_id=hp-shop-women-card">Shop dames</a>
+			</li>
+		</ul>
 
 
 
 
 	</main>
+
 	<footer>
+		<section>
+			<h2>Men's wear</h2>
+			<ul>
+				<li><a href=""></a>Men's Gymshorts</li>
+				<li><a href=""></a>Sportshirts</li>
+				<li><a href=""></a>Sleeveless T-shirts</li>
+				<li><a href=""></a>Gym strings</li>
+			</ul>
+			<h2>Accesoires</h2>
+			<ul>
+				<li><a href=""></a>Damesondergoed</li>
+				<li><a href=""></a>Herenondergoed</li>
+				<li><a href=""></a>Tassen</li>
+				<li><a href=""></a>Sportassen</li>
+				<li><a href=""></a>Sportsokken</li>
+				<li><a href=""></a>Sneakersokken</li>
+				<li><a href=""></a>Petten</li>
+				<li><a href=""></a>Beanies</li>
+			</ul>
+			<h2>Sportkleding</h2>
+			<p>Onze sportkleding is ontworpen om het beste uit jezelf te halen. Want als je maximaal wilt presteren,
+				zou niets je in de weg moeten zitten - zeker je gymkleding niet.</p>
+			<h2>Vanuit het krachthonk</h2>
+			<p>Gymshark is in 2012 ontstaan vanuit een liefde voor fitness en lifting en die passie zie je vandaag de
+				dag terug in alle collecties die we ontwerpen.
+				Onze roots liggen in het krachthonk en daarom weten we uit ervaring wat er qua sportkleding wel en niet
+				werkt.
+				De comfy en functionele Gymshark collecties zijn dan ook voorzien van de laatste innovaties en onze
+				accessoires helpen je om op je best te presteren.
+				Om onze roots eer aan te doen, hebben we bodybuildingcollecties voor dames en heren met moderne
+				ontwerpen die zijn voorzien van klassieke details en
+				innovatieve stoffen waarin je je volledig op je volgende PB kunt richten.</p>
 
 
+			</ul>
+		</section>
 	</footer>
 
 
-<script src="./scripts/script.js"></script>
+	<!-- verbindt met mijn script bestand -->
+	<script src="./scripts/script.js"></script>
 </body>
 
 </html>
+<!-- Shortcut aanmaken van meerdere li's -->
+<!-- li*4>a -->
+
+
+<!-- <li>
+					<a href="https://nl.gymshark.com/collections/new-releases">Men's gymwear</a>
+				</li>
+				<li>
+					<a href="https://nl.gymshark.com/collections/new-releases">Men's gymshorts</a>
+				</li>
+				<a href="https://nl.gymshark.com/collections/new-releases">Sportshirts</a>
+				<a href="https://nl.gymshark.com/collections/new-releases">Sleeveless T-shirt</a>
+				<a href="https://nl.gymshark.com/collections/new-releases">Gym strings</a>
+
+				<a href="https://nl.gymshark.com/collections/new-releases">Gym strings</a> -->

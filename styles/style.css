@@ -1,24 +1,26 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+/* Zorgt ervoor dat alle elementen consistent worden behandeld qua box-model */
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+/* Variabelen worden hier omgezet voor een flexibele styling en thema's */
 :root {
-	/* startje */
-	--color-text: #111;
-	--color-background: #eee;
+    /* zorgt ervoor dat lichte en donkere kleurenschema's worden aangepast als de gebruiker dit wilt  */
+    color-scheme: light dark;
+    --color-text: #111; /* Tekstkleur */
+    --color-background: light-dark(white, black); /* Achtergrondkleur op basis van thema */
+    --bg-form: light-dark(#fff6, #0006); /* Achtergrond van formulieren */
+    --color-theme: light-dark(white, black); /* Hoofdkleur van het thema */
+	--header-background: white;
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
@@ -26,90 +28,146 @@
 
 /* Basis styling voor mobile-first (357px) */
 body {
-	margin: 0;
-	background-color:var(--color-background);
+    margin: 0;
+    background-color: var(--color-background); /* Gebruikt de achtergrondkleur van het thema */
 }
 
+/* Zorgt ervoor dat video's gecentreerd zijn..... MAAAR WAAROM LUKT DIT MIJ NOG NIET GVD */
 video {
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+	padding: 0;
 }
 
+/* Styling van de header: zorgt voor centrering en uitlijning van de dingen (dus me logo etc) die er worden geplaats  */
 header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 1rem;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: var(--header-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
+
+main {
+	margin-top: 5em;
+}
+/* Verkleint de breedte van afbeeldingen binnen links */
 header a img {
-	width: 2rem;
+    width: 2rem;
 }
 
-header a:first-of-type  {
-	margin: 0 auto;
+/* Stelt de eerste linkafbeelding in op een grotere breedte en centrering */
+header a:first-of-type {
+    margin: 0 auto;
 }
 
 header a:first-of-type img {
-	width: 4rem;
+    width: 2rem;
 }
 
+/* Knop styling: vierkant, zonder rand, en transparant */
 header button {
-	width: 2.5rem;
-	background-color: transparent;
-	aspect-ratio: 1/1;
-	border: none;
+    width: 2.5rem;
+    background-color: transparent;
+    aspect-ratio: 1/1;
+    border: none;
 }
 
+/* Zorgt ervoor dat knoppen afbeeldingen hun container volledig vullen */
 header button img {
-	width: 100%;
+    width: 100%;
 }
 
+/* Stijling voor het menu dat uitklapt vanaf de zijkant */
 nav {
-	position: fixed;
-	top: 0;
-	background-color: whitesmoke;
-	height: 100vh;
-	width: 100vw;
-	translate: 100vw;
-	transition: .5s;
+    position: fixed;
+    top: 0;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+    translate: -100%; /* Menu begint buiten beeld */
+    transition: .5s; /* Zachte overgang */
 }
 
+/* Zorgt voor een kolom lay-out voor het navigatiemenu */
 nav ul {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	margin: 0;
-	padding-top: 2rem;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding-top: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav ul li {
-	list-style-type: none;
+    list-style-type: none; /* Verwijdert standaard opsommingstekens */
 }
 
+/* Links in het menu: geen onderstreping en zwarte tekst */
 nav ul li a {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 }
 
-
+/* Zorgt ervoor dat de hoofdinhoud horizontaal scrollbaar is */
 main ul {
+    /* display: flex;
+    overflow-y: hidden;
+    gap: 3rem; */
 	display: flex;
-	overflow-y: hidden;
-	/* dit zorgt ervoor dat er geen overvloed is op de y as*/
-	gap: 3rem;
+    overflow-y: hidden;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    margin-left: 1em;
+    margin-top: 2em;
+    scroll-snap-type: x mandatory; /* met behulp van Baha dit zorgt ervoor dat het doorvloeit naar de volgende item die er is en niet halverwege gaat stoppen proximity heet nabijheid in het nederlands mandotorty*/
 }
 
+/* Verwijdert standaard opsommingstekens van de lijst in de hoofdinhoud */
 main ul li {
+    list-style-type: none;
+	width: 75%;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center; 
+}
+
+footer ul li {
 	list-style-type: none;
 }
 
-main ul li img {
-	width: 100%;
+footer ul {
+	padding: 0;
+}
+
+footer section{
+	padding: 2em;
 }
 
 
+/* Afbeeldingen binnen de hoofdinhoud vullen hun container */
+/* main ul li img { */
+    /* width: 100%; */
+/* } */
+
+/* Zorgt ervoor dat het menu naar voren komt wanneer deze wordt geopend */
 nav.toonMenu {
-	translate: 0;
+    translate: 0;
 }
+
+
+/* @keyframes voorbeeld {
+	0% {transform: translateY(0%);}
+	100% {transform: translateY(100%);}
+}
+
+@keyframes voorbeeld2 {
+	0% {transform: translateY(-100%);}
+	50% {transform: translateY(0%);}
+	100% {transform: translateY(100%);}
+} */

@@ -8,10 +8,22 @@
     box-sizing: border-box;
 }
 
+* {
+	font-family: montserrat;
+}
+
+
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 /* Variabelen worden hier omgezet voor een flexibele styling en thema's */
+
+@font-face {
+	font-family: montserrat;
+	src: url(../font/Montserrat/static/Montserrat-Regular.ttf);
+	font-weight: 300;
+}
+
 :root {
     /* zorgt ervoor dat lichte en donkere kleurenschema's worden aangepast als de gebruiker dit wilt  */
     color-scheme: light dark;
@@ -20,7 +32,9 @@
     --bg-form: light-dark(#fff6, #0006); /* Achtergrond van formulieren */
     --color-theme: light-dark(white, black); /* Hoofdkleur van het thema */
 	--header-background: white;
+	--font-text: montserrat;
 }
+
 
 /****************/
 /* JOUW STYLING */
@@ -100,7 +114,6 @@ nav ul {
     gap: 1rem;
     margin: 0;
     padding-top: 2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav ul li {
@@ -135,6 +148,11 @@ main ul li {
     display: flex;
     flex-direction: column;
     scroll-snap-align: center; 
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main ul li video {
+    width: 75vw;
 }
 
 footer ul li {
@@ -151,9 +169,19 @@ footer section{
 
 
 /* Afbeeldingen binnen de hoofdinhoud vullen hun container */
-/* main ul li img { */
-    /* width: 100%; */
-/* } */
+/* ul li img {
+	order: 1;
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+}
+
+ul li h3, ul li h4 {
+	order: 2;
+
+} */
+
+
 
 /* Zorgt ervoor dat het menu naar voren komt wanneer deze wordt geopend */
 nav.toonMenu {
@@ -171,3 +199,24 @@ nav.toonMenu {
 	50% {transform: translateY(0%);}
 	100% {transform: translateY(100%);}
 } */
+
+
+section:nth-last-of-type(2) li {
+	display: flex;
+	flex-direction: column;
+}
+
+section:nth-last-of-type(2) li > img {
+	order:-100;
+}
+
+section:nth-last-of-type(2) li > h3 {
+	order:500;
+}
+
+section:nth-last-of-type(2) li > h4 {
+	order:600;
+}
+
+
+

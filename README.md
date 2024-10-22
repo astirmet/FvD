@@ -56,7 +56,10 @@ test test test ik loop een beetje vast hihih
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+ 	  De website heeft ongestructureerde HTML-code. Bij een deel is eerst de afbeelding (img) erin gecodeerd en daarna pas de alt-tekst, wat voor onduidelijkheid zorgt. Daarnaast zijn niet alle alt-teksten goed uitgelegd.
+    De taal klopt niet helemaal. Het is een Nederlandse site, maar je ziet af en toe Engelse woorden zoals “shop nu” en “shop now” door elkaar. Dat maakt het soms verwarrend.
+	  Het valt me op dat Gymshark niet volledig focust op navigatiegemak voor mensen met een beperking. De code is niet goed geformuleerd voor schermlezers en hulpmiddelen.
+	  Het kleurcontrast is op sommige plekken te laag, waardoor het lastig kan zijn om te lezen. Ze hebben ook geen dark mode, wat best essentieel is voor mensen met sensorische problemen.
 
 </details>
 

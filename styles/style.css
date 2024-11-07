@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -9,7 +11,7 @@
 }
 
 * {
-	font-family: montserrat;
+    font-family: "Montserrat", serif;
 }
 
 
@@ -18,21 +20,28 @@
 /*********************/
 /* Variabelen worden hier omgezet voor een flexibele styling en thema's */
 
-@font-face {
+/* @font-face {
 	font-family: montserrat;
 	src: url(../font/Montserrat/static/Montserrat-Regular.ttf);
 	font-weight: 300;
-}
+} */
 
 :root {
     /* zorgt ervoor dat lichte en donkere kleurenschema's worden aangepast als de gebruiker dit wilt  */
     color-scheme: light dark;
-    --color-text: #111; /* Tekstkleur */
-    --color-background: light-dark(white, black); /* Achtergrondkleur op basis van thema */
-    --bg-form: light-dark(#fff6, #0006); /* Achtergrond van formulieren */
-    --color-theme: light-dark(white, black); /* Hoofdkleur van het thema */
-	--header-background: white;
-	--font-text: montserrat;
+    --color-text: #111;
+    /* Tekstkleur */
+    --color-background: light-dark(white, black);
+    /* Achtergrondkleur op basis van thema */
+    --bg-form: light-dark(#fff6, #0006);
+    /* Achtergrond van formulieren */
+    --color-theme: light-dark(white, black);
+    /* Hoofdkleur van het thema */
+    --bg-color: #f5f5f5;
+    --header-background: white;
+    --font-text: "Montserrat", serif;
+    --text-color: black;
+    --font-weight: bold;
 }
 
 
@@ -43,32 +52,39 @@
 /* Basis styling voor mobile-first (357px) */
 body {
     margin: 0;
-    background-color: var(--color-background); /* Gebruikt de achtergrondkleur van het thema */
+    background-color: var(--color-background);
+    /* Gebruikt de achtergrondkleur van het thema */
 }
 
 /* Zorgt ervoor dat video's gecentreerd zijn..... MAAAR WAAROM LUKT DIT MIJ NOG NIET GVD */
 video {
     display: block;
     margin: 0 auto;
-	padding: 0;
+    padding: 0;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Styling van de header: zorgt voor centrering en uitlijning van de dingen (dus me logo etc) die er worden geplaats  */
 header {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	background-color: var(--header-background);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: var(--header-background);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    z-index: 999;
 }
+
+
 
 
 main {
-	margin-top: 5em;
+    margin-top: 5em;
 }
+
 /* Verkleint de breedte van afbeeldingen binnen links */
 header a img {
     width: 2rem;
@@ -103,8 +119,10 @@ nav {
     background-color: whitesmoke;
     height: 100vh;
     width: 100vw;
-    translate: -100%; /* Menu begint buiten beeld */
-    transition: .5s; /* Zachte overgang */
+    translate: -100%;
+    /* Menu begint buiten beeld */
+    transition: .5s;
+    /* Zachte overgang */
 }
 
 /* Zorgt voor een kolom lay-out voor het navigatiemenu */
@@ -117,7 +135,8 @@ nav ul {
 }
 
 nav ul li {
-    list-style-type: none; /* Verwijdert standaard opsommingstekens */
+    list-style-type: none;
+    /* Verwijdert standaard opsommingstekens */
 }
 
 /* Links in het menu: geen onderstreping en zwarte tekst */
@@ -131,30 +150,178 @@ main ul {
     /* display: flex;
     overflow-y: hidden;
     gap: 3rem; */
-	display: flex;
+    display: flex;
     overflow-y: hidden;
     gap: 2rem;
     margin: 0;
     padding: 0;
     margin-left: 1em;
     margin-top: 2em;
-    scroll-snap-type: x mandatory; /* met behulp van Baha dit zorgt ervoor dat het doorvloeit naar de volgende item die er is en niet halverwege gaat stoppen proximity heet nabijheid in het nederlands mandotorty*/
+    scroll-snap-type: x mandatory;
+    /* met behulp van Baha dit zorgt ervoor dat het doorvloeit naar de volgende item die er is en niet halverwege gaat stoppen proximity heet nabijheid in het nederlands mandotorty*/
 }
 
 /* Verwijdert standaard opsommingstekens van de lijst in de hoofdinhoud */
 main ul li {
     list-style-type: none;
-	width: 75%;
+    width: 75%;
     display: flex;
+    position: relative;
     flex-direction: column;
-    scroll-snap-align: center; 
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-snap-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main ul li video {
     width: 75vw;
 }
 
+main section:nth-of-type(5) video {
+    border-radius: 0.25em;
+}
+
+/* main section:nth-of-type(1) a {
+    position: absolute;
+} */
+
+main section:first-of-type {
+    position: relative;
+}
+
+main section:first-of-type section {
+    position: absolute;
+    bottom: 2em;
+    max-width: 25em;
+    min-width: 20em;
+    color: var(--header-background);
+}
+
+main section:first-of-type section a {
+    text-align: center;
+    border: none;
+    background-color: var(--header-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    border-radius: 2em;
+    padding: 0.7em 1em;
+    margin-left: 2em;
+    width: 20em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+main section:first-of-type section article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+main>section:nth-of-type(3) h2 {
+    margin-left: 1em;
+    margin-top: 4em;
+    text-transform: uppercase;
+}
+
+main>section:nth-of-type(5) h2 {
+    margin-left: 1em;
+    margin-top: 4em;
+    text-transform: uppercase;
+}
+
+main>section:nth-of-type(3) a:nth-of-type(1) {
+    border: none;
+    background-color: var(--color-text);
+    color: var(--header-background);
+    border-radius: 2em;
+    padding: 0.7em 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+main>section:nth-of-type(3) a:nth-of-type(2) {
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--color-text);
+    border-radius: 2em;
+    padding: 0.8em 1.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+main section:nth-of-type(4) li h3,
+main section:nth-of-type(4) li a {
+    position: absolute;
+}
+
+main section:nth-of-type(6) img{
+    border-radius: 0.25em;
+}
+
+main section:nth-of-type(4) li h3 {
+    bottom: 0;
+    margin-left: 1em;
+    color: var(--header-background);
+    margin-bottom: 5em;
+    text-transform: uppercase;
+
+}
+
+main section:nth-of-type(5) li h3{
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 4em 1em;
+    color: var(--header-background);
+}
+
+
+
+main section:nth-of-type(4) li a{
+    background-color: var(--header-background);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 2em;
+    padding: 1em 2em;
+    bottom: 0;
+    margin: 0 0 2em 1em;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+main section:nth-of-type(5) li a {
+    background-color: var(--header-background);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 2em;
+    padding: 1em 2em;
+    bottom: 0;
+    margin: 0 0 1em 1em;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+main section:nth-of-type(6) li a {
+    background-color: var(--header-background);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 2em;
+    padding: 1em 1.2em;
+    bottom: 0;
+    margin: 0 0 1em 1em;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+main section ul li a {
+    position: absolute;
+}
+
+/* 
 footer ul li {
 	list-style-type: none;
 }
@@ -163,9 +330,185 @@ footer ul {
 	padding: 0;
 }
 
-footer section{
-	padding: 2em;
+
+footer section {
+	padding: 2em 2em 0 2em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
+footer section ul{
+    list-style-type: none;
+}
+
+footer img{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+footer section:nth-of-type(2) ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    justify-content: center; 
+}
+
+footer section:nth-of-type(1)ul{
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: .8rem;
+}
+
+
+footer section:last-of-type ul li img {
+    width: 1.5rem; 
+    height: auto; 
+}
+
+footer section:last-of-type {
+    display: flex;
+    flex-direction: row; 
+    gap: 0.5rem; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+footer section:last-of-type img {
+    width: 2rem; 
+    height: auto; 
+} */
+
+
+nav.toonMenu {
+    translate: 0;
+}
+
+
+section:nth-of-type(3) li {
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-of-type(3) li>img {
+    order: -100;
+}
+
+section:nth-of-type(3) li>h3 {
+    order: 500;
+}
+
+section:nth-of-type(3) li>h4 {
+    order: 600;
+}
+
+/* 
+footer section:nth-of-type(4) {
+    padding: 0;
+}
+
+
+footer section:nth-of-type(4) ul {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+} */
+
+label select {
+    font-size: 1rem;
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+/* 
+footer label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+footer label select {
+    border: none;         
+    outline: none;         
+    background-color: transparent; 
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+footer > p {
+    text-align: center;
+}
+
+
+footer section:nth-of-type(2) > h3 {
+    border-top: rgb(0, 0, 0, .5) .5px solid;
+
+    padding: 1em 0;
+    margin: 0;
+}
+
+footer section:nth-of-type(3) > h3 {
+    font-weight: bold;
+    cursor: pointer;
+} */
+
+/* footer section:nth-of-type(4) > h3 {
+    font-weight: bold;
+    cursor: pointer;
+} */
+
+/* footer section:nth-of-type(2) ul,
+footer section:nth-of-type(4) ul {
+} */
+
+
+/* section:nth-of-type(4) li {
+    position: relative;
+    margin-right: 5em;
+} */
+
+/* section:nth-of-type(4) li h3, 
+section:nth-of-type(4) li a 
+ {
+    position: absolute;
+} */
+
+/* section:nth-of-type(4) li h3{
+    bottom: 0;
+    margin-left: 1em;
+    color: var(--header-background);
+    margin-bottom: 5em;
+    text-transform: uppercase;
+
+} */
+
+/* section:nth-of-type(4) li a {
+    background-color: var(--header-background);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 2em;
+    padding: 1em 2em;
+    bottom: 0;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    text-transform: uppercase;
+    font-weight: bold
+} */
+
+
+
+/* footer section:nth-of-type(4) h3 {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    cursor: pointer;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+} */
 
 
 /* Afbeeldingen binnen de hoofdinhoud vullen hun container */
@@ -183,12 +526,6 @@ ul li h3, ul li h4 {
 
 
 
-/* Zorgt ervoor dat het menu naar voren komt wanneer deze wordt geopend */
-nav.toonMenu {
-    translate: 0;
-}
-
-
 /* @keyframes voorbeeld {
 	0% {transform: translateY(0%);}
 	100% {transform: translateY(100%);}
@@ -200,23 +537,206 @@ nav.toonMenu {
 	100% {transform: translateY(100%);}
 } */
 
-
-section:nth-last-of-type(2) li {
-	display: flex;
-	flex-direction: column;
+footer {
+    padding: 2rem;
 }
 
-section:nth-last-of-type(2) li > img {
-	order:-100;
+footer h3{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1em;
 }
 
-section:nth-last-of-type(2) li > h3 {
-	order:500;
-}
-
-section:nth-last-of-type(2) li > h4 {
-	order:600;
+footer section:nth-of-type(1) ul {
+    flex-direction: column;
 }
 
 
+footer section:nth-of-type(4) details {
+    display: none;
+}
 
+footer section:nth-of-type(4) ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+}
+
+
+footer section:nth-of-type(4) ul li {
+    list-style-type: none;
+    width: 100%;
+}
+
+footer section:nth-of-type(5) ul {
+    padding: 0 3.5em;
+    gap: 0.8em;
+}
+
+
+footer section:nth-of-type(4) ul li a img,
+footer section:nth-of-type(5) ul li a img {
+    width: 100%;
+}
+
+
+footer section:nth-of-type(5) {
+    width: 100%;
+}
+
+footer ul {
+    display: flex;
+    padding: 0;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+footer section:nth-of-type(4) li a{
+    position: relative;
+}
+
+/* Styling voor de dropdown-secties in de footer */
+footer details {
+    margin-bottom: 1rem;
+}
+
+/* Styling voor de titels van de dropdowns */
+footer summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5em 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    list-style: none;
+    outline: none;
+}
+
+/* Verberg de standaard marker */
+footer summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Styling voor de lijst in de dropdown */
+footer details ul {
+    padding-left: 1rem;
+    margin: 0;
+
+}
+
+footer details ul li {
+    margin-bottom: 0.5em;
+    list-style: none;
+}
+
+/* Styling voor de links in de lijst */
+footer details ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+footer section summary {
+    padding-top: 1em;   /* Ruimte boven de tekst */
+    padding-bottom: 0.5em; /* Ruimte onder de tekst */
+}
+
+
+
+/* ALI is daddy en heeft geholpen xoxox */
+@media screen and (min-width: 786px) {
+    main section:nth-of-type(1) section h2 {
+        color: black;
+    }
+}
+
+footer section:nth-of-type(4) img {
+    max-width: 100%;
+}
+
+footer section ul li {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: relative;
+    flex-direction: column;
+}
+
+/* footer section:nth-of-type(4) li a {
+    max-width: 100%;
+    color: var(--color-text);
+    bottom: 0;
+    border: 1px solid var(--bg-color);
+    background-color: var(--bg-color);
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: 600;
+    /* padding: 0 0 1em 0; */
+    
+
+/* footer section:nth-of-type(4) li a h3 {
+    max-width: 100%;
+    position: absolute;
+    color: var(--color-text);
+    bottom: 0;
+    border: 1px solid var(--bg-color);
+    background-color: var(--bg-color);
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: 600;
+    padding: 0 0 0 0;
+    z-index: 100;
+} */
+
+
+/* footer section:nth-of-type(4) li a {
+    position: relative;
+    display: inline-block;
+}
+
+footer section:nth-of-type(4) li a img {
+    width: 100%;
+    display: block;
+}
+
+footer section:nth-of-type(4) li a h3 {
+    position: absolute;
+    bottom: 0;
+    color: var(--color-text);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    font-size: small;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 1;
+} */
+
+footer section:nth-of-type(4) li a {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color: var(--color-text);
+}
+
+footer section:nth-of-type(4) li a img {
+    width: 100%;
+    display: block;
+}
+
+footer section:nth-of-type(4) li a h3 {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    padding: 10px 0; /* Groeit mee met de breedte van de afbeelding */
+    background-color: rgba(255, 255, 255, 0.7); /* Transparante achtergrond */
+    color: var(--color-text);
+    font-size: small;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}

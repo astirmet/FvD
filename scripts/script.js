@@ -1,7 +1,3 @@
-// JavaScript Document
-console.log("hi");
-
-// sluiten button
 
 // select hamburger menu button
 const menuOpen = document.querySelector("header button");
@@ -11,7 +7,6 @@ const closeButton = document.querySelector("header nav button");
 
 // select menu
 const navMenu = document.querySelector('header nav')
-
 
 menuOpen.onclick = openMenu;
 closeButton.onclick = sluitMenu;
@@ -23,6 +18,8 @@ function openMenu(){
 function sluitMenu() {
     navMenu.classList.remove("toonMenu");
 }
+
+
 
 
 // JavaScript om de header tekst elke 5 seconden te veranderen

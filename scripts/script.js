@@ -1,49 +1,45 @@
-
 // select hamburger menu button
-const menuOpen = document.querySelector("header button");
+const menuOpen = document.querySelector("header > button:nth-of-type(1)");
 
 // select close button
-const closeButton = document.querySelector("header nav button");
+const closeButton = document.querySelector("header nav:nth-of-type(1) button");
+
+const heartBtn = document.querySelectorAll("main section:nth-of-type(2) ul li button svg");
+
+const listSection = document.querySelector("main section:nth-of-type(2) ul");
 
 // select menu
-const navMenu = document.querySelector('header nav')
+const navMenu = document.querySelector("header nav");
+
+heartBtn.forEach((heart) => {
+    heart.addEventListener("click", () => {
+        heart.classList.toggle("added");
+    });
+});
+
+const flexBtn = document.querySelector("main section:nth-of-type(1) button:nth-of-type(2)");
+const gridBtn = document.querySelector("main section:nth-of-type(1) button:nth-of-type(1)");
+
+function setFlex() {
+    listSection.classList.remove("grid"); 
+    listSection.classList.add("flex"); 
+}
+
+function setGrid() {
+    listSection.classList.remove("flex"); 
+    listSection.classList.add("grid"); 
+}
+
+flexBtn.addEventListener("click", setFlex);
+gridBtn.addEventListener("click", setGrid);
 
 menuOpen.onclick = openMenu;
 closeButton.onclick = sluitMenu;
 
-function openMenu(){
-    navMenu.classList.add('toonMenu')
+function openMenu() {
+    navMenu.classList.add("toonMenu");
 }
 
 function sluitMenu() {
     navMenu.classList.remove("toonMenu");
 }
-
-
-
-
-// JavaScript om de header tekst elke 5 seconden te veranderen
-// REMINDER MEHMET JAAR 2 JAVASCRIPT Const zorgt ervoor dat je de variabel-
-// zelf niet kan veranderen maar het object daarin wel zoals text etc.
-
-// const texts = ["DADDY'S HOME", "10% STUDENTENKORTING", "GRATIS STANDAARD LEVERING VANAF $70",
-//     "BINNEN 30 DAGEN GRATIS RETOURENEREN. *UITZONDERINGEN VAN TOEPASSING"];
-    
-
-// // // REMINDER JAAR 2 Function 
-// function changeText() {
-// const h1 = document.getElementById("header-text");
-// index = (index + 1) % texts.length;
-// headerText.textContent = texts[index];}
-// Verander de tekst elke 5 seconden
-// setInterval(changeText, 5000);
-
-// // Functie om de tekst te veranderen met behulp van CHATGPT doorgevoerd met mijn eigen code die ik al had!
-// function changeText() {
-//     const h1 = document.querySelector("h1");  // Selecteer de eerste h1 in het document
-//     index = (index + 1) % texts.length;  // Verhoog de index en reset indien nodig
-//     h1.textContent = texts[index];  // Verander de tekst
-// }
-
-// // Verander de tekst elke 5 seconden
-// setInterval(changeText, 5000);

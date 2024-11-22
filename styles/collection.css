@@ -1,0 +1,279 @@
+/* heren css */
+:root {
+    /* zorgt ervoor dat lichte en donkere kleurenschema's worden aangepast als de gebruiker dit wilt  */
+    color-scheme: light dark;
+    --color-text: #111;
+    /* Tekstkleur */
+    --color-background: light-dark(white, black);
+    /* Achtergrondkleur op basis van thema */
+    --bg-form: light-dark(#fff6, #0006);
+    /* Achtergrond van formulieren */
+    --color-theme: light-dark(white, black);
+    /* Hoofdkleur van het thema */
+    --bg-color: #f5f5f5;
+    --light-color: grey;
+    --header-background: white;
+    --font-text: "Montserrat", serif;
+    --text-color: black;
+    --font-weight: bold;
+    --grey-link: #53565a;
+}
+
+
+
+main section:nth-of-type(1) h1 {
+    padding-left: 2em;
+    margin-bottom: 0;
+    font-size: small;
+    text-transform: uppercase;
+    color: var(--light-color);
+}
+
+main section:nth-of-type(1) h2 {
+    margin: 0;
+    padding-left: 1.2em;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+main section:nth-of-type(1) p {
+    padding-left: 1.5em;
+    color: var(--light-color);
+}
+
+main section:nth-of-type(1) button {
+    margin: 0 0 0 2em;
+    padding: 1em;
+    border-radius: 2em 2em 2em 2em;
+    border: none;
+    width: 10em;
+}
+
+main section:nth-of-type(1) button img {
+    width: 2em;
+}
+
+main section:nth-of-type(2) ul {    
+    display: grid ;
+    grid-template-columns: repeat(2, 1fr) !important; /* Twee kolommen */
+    gap: 1em !important; /* Ruimte tussen de items */
+    max-width: 100%; /* Zorgt dat de container binnen het scherm blijft */
+    margin: 0 auto; /* Centreert de grid */
+    padding: 0 2em; /* Ruimte aan de zijkanten */
+    box-sizing: border-box; /* Inclusief padding in de breedteberekening */
+    overflow-x: hidden;
+    transition: .5s;
+}
+
+main section:nth-of-type(2) ul.grid {
+    display: grid ;
+    grid-template-columns: repeat(2, 1fr) !important; /* Twee kolommen */
+}
+
+main section:nth-of-type(2) ul.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Zorgt ervoor dat afbeeldingen netjes binnen hun container passen */
+main section:nth-of-type(2) ul li img {
+    height: auto; /* Zorgt voor proportioneel schalen */
+    max-width: 100%; /* Zorgt ervoor dat de afbeelding niet groter wordt dan de container */
+    object-fit: cover; /* Snijdt de afbeelding bij zodat deze past */
+    min-width: 0;
+}
+
+
+
+
+main section:nth-of-type(2) ul li button  {
+    position: absolute;
+    background-color: white;
+    border-radius: 3em;
+    padding: .1em;
+    z-index: 98;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    margin: .5rem;
+    right: 0;
+    border: none;
+    overflow: visible;
+
+}
+
+
+
+main section ul li a img {
+    width: 100%;
+}
+
+main section:nth-of-type(2) ul li button svg.added {
+    fill: black !important;
+}
+
+
+main section:nth-of-type(2) ul li button svg {
+    fill: transparent;
+    width: 60%;
+    stroke: black;
+    stroke-width: 0.03125em;
+    transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+main section:nth-of-type(2) ul li button svg:hover {
+    fill: black;
+}
+
+
+
+main ul li {
+    width: 100%;
+    min-width: auto;
+}
+
+main section:nth-of-type(2) ul{
+    object-fit: cover;
+}
+
+
+section:nth-of-type(3) ul li a img {
+    width: 0%;
+}
+
+footer section section:nth-of-type(3) ul {
+    padding: 0 5em;
+    gap: 0.8em;
+}
+
+footer section:nth-of-type(4) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8em;
+    opacity: 1;
+}
+
+
+footer section:nth-of-type(4) img {
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
+}
+
+
+/* Style the list item to make it a relative container */
+main section:nth-of-type(2) ul li {
+    position: relative; /* Required for button positioning */
+}
+
+main section:nth-of-type(2) ul {
+    width: 100vw;
+    padding: 1rem;
+    min-width: auto;
+    max-width: auto;
+    grid-template-columns: repeat(2, 1fr);
+
+
+}
+
+/* Style the main image */
+main section:nth-of-type(2) ul li img {
+    width: 100%; /* Full width of the parent container */
+    height: auto; /* Keep aspect ratio */
+    display: block; /* Avoid extra spacing */
+}
+
+
+
+
+
+/*  Footer  */
+
+footer section:nth-of-type(2) ul {
+    gap: 1em;
+    justify-content: center;
+    margin: 5rem 0;   
+}
+
+
+footer section:nth-of-type(2) ul li a img {
+    width: 100%;
+}
+
+
+footer section:nth-of-type(1) section:nth-of-type(3) ul {
+    padding: 0;
+}
+
+footer section:nth-of-type(2) h3 { 
+position: absolute;
+bottom: 0;
+margin: 0;
+font-size: .8rem;
+width: 100%;
+padding: 0.8em;
+text-align: center;
+background-color: var(--light-color);
+color: var(--color-text);
+/* font-size: small; */
+font-weight: 600;
+text-transform: uppercase;
+box-sizing: border-box;
+}
+
+footer > section:nth-of-type(3) ul {
+    display: flex;
+    padding: 0;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Zorg dat de <li> alleen zo breed is als nodig */
+footer > section:nth-of-type(3) ul li {
+    display: inline-block; /* Zorg dat de li niet de volledige breedte van de parent inneemt */
+    width: auto; /* Fit-content wordt vaak niet nodig als je 'auto' gebruikt */
+    text-align: center; /* Optioneel, als je tekst/images wilt centreren */
+}
+
+/* Zorg dat de <a> zich niet uitbreidt */
+footer > section:nth-of-type(3) ul li a {
+    display: block; /* Omhoog en omlaag werken */
+    width: fit-content; /* Of pas aan aan de inhoud */
+}
+
+/* Zorg dat de afbeelding zich goed gedraagt */
+footer > section:nth-of-type(3) ul li a img {
+    width: auto; /* Laat de afbeelding zich aanpassen aan de natuurlijke grootte */
+    max-width: 50px; /* Limiteer indien nodig */
+    height: auto; /* Houd de verhoudingen intact */
+}
+
+footer ul{
+    display: flex;
+    padding: 0;
+}
+
+
+@media (min-width: 786px) {
+    footer section:nth-of-type(2) h3 { 
+
+        font-size: 1rem;
+     }
+
+     footer > section:nth-of-type(3) ul li a {
+        width: 20%;
+     }
+
+
+}
+
+@media (min-width: 786px) {
+    main section:nth-of-type(2) ul li img {
+        width: clamp(6em, 10vw, 12em); /* Laat de afbeelding iets groter worden op bredere schermen */
+    }
+}

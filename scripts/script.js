@@ -30,8 +30,13 @@ function setGrid() {
     listSection.classList.add("grid"); 
 }
 
+if(flexBtn){
 flexBtn.addEventListener("click", setFlex);
+}
+
+if(gridBtn){
 gridBtn.addEventListener("click", setGrid);
+}
 
 menuOpen.onclick = openMenu;
 closeButton.onclick = sluitMenu;

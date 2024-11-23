@@ -1,26 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 /**************/
 /* CSS REMEDY */
 /**************/
-/* Zorgt ervoor dat alle elementen consistent worden behandeld qua box-model */
 *,
 *::after,
 *::before {
     box-sizing: border-box;
 }
-
 * {
     font-family: "Montserrat", serif;
 }
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
+@font-face {
+    font-family: "Montserrat";
+    src: url("../font/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
-
+@font-face {
+    font-family: "Montserrat";
+    src: url("../font/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 /* Variabelen worden hier omgezet voor een flexibele styling en thema's */
-
-
 :root {
     /* zorgt ervoor dat lichte en donkere kleurenschema's worden aangepast als de gebruiker dit wilt  */
     color-scheme: light dark;
@@ -40,14 +46,9 @@
     --font-weight: bold;
     --grey-link: #53565a;
 }
-
-
-
-
 /****************/
 /* JOUW STYLING */
 /****************/
-
 /* Basis styling voor mobile-first (357px) */
 body {
     margin: 0;
@@ -55,7 +56,6 @@ body {
     /* Gebruikt de achtergrondkleur van het thema */
 }
 
-/* Zorgt ervoor dat video's gecentreerd zijn..... MAAAR WAAROM LUKT DIT MIJ NOG NIET GVD */
 video {
     display: block;
     margin: 0 auto;
@@ -64,30 +64,25 @@ video {
     object-fit: cover;
 }
 
-/* Styling van de header: zorgt voor centrering en uitlijning van de dingen (dus me logo etc) die er worden geplaats  */
 header {
     position: fixed;
     width: 100%;
     top: 0;
     background-color: var(--header-background);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     z-index: 999;
 }
-
-
 main {
     margin-top: 5em;
 }
 
-/* Verkleint de breedte van afbeeldingen binnen links */
 header a img {
     width: 2rem;
 }
 
-/* Stelt de eerste linkafbeelding in op een grotere breedte en centrering */
 header a:first-of-type {
     margin: 0 auto;
 }
@@ -113,6 +108,7 @@ header button img {
 header nav:nth-of-type(1) {
     position: fixed;
     top: 0;
+    left: 0;
     background-color: whitesmoke;
     height: 100vh;
     width: 100vw;
@@ -129,8 +125,6 @@ header nav:nth-of-type(2) {
     flex-wrap: wrap;
 }
 
-
-
 /* Zorgt voor een kolom lay-out voor het navigatiemenu */
 nav ul {
     display: flex;
@@ -142,7 +136,6 @@ nav ul {
 
 nav ul li {
     list-style-type: none;
-    /* Verwijdert standaard opsommingstekens */
 }
 
 /* Links in het menu: geen onderstreping en zwarte tekst */
@@ -171,10 +164,10 @@ main ul {
     margin-left: 1em;
     margin-top: 2em;
     scroll-snap-type: x mandatory;
-    /* met behulp van Baha dit zorgt ervoor dat het doorvloeit naar de volgende item die er is en niet halverwege gaat stoppen proximity heet nabijheid in het nederlands mandotorty*/
+    /* met behulp van BAHA dit zorgt ervoor dat het doorvloeit naar de volgende item die er is en niet halverwege gaat stoppen proximity heet nabijheid in het nederlands mandotorty*/
 }
 
-/* Verwijdert standaard opsommingstekens van de lijst in de hoofdinhoud */
+/* Verwijdert standaard opsommingstekens van de lijst in de hoofdinhoud en haalt de puntjes weg aan beide paginas naast de tekst*/
 main ul li {
     list-style-type: none;
     width: 75%;
@@ -184,13 +177,11 @@ main ul li {
     flex-direction: column;
     scroll-snap-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
 }
 
 main ul li video {
-    width: 70vw;
     max-height: 27em;
-    max-width: 25em;
-    min-width: 15em;
 }
 
 main section:nth-of-type(2) ul li h3,
@@ -216,103 +207,14 @@ main section:nth-of-type(2) ul li p {
     margin-top: 0.2em;
 }
 
-
-main section:nth-of-type(5) video {
-    border-radius: 0.25em;
-}
-
-
 main section:first-of-type {
     position: relative;
-}
-
-main section:first-of-type section {
-    position: absolute;
-    bottom: 2em;
-    max-width: 25em;
-    min-width: 20em;
-    color: var(--header-background);
-    position: absolute;
-    bottom: 2%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 main section:first-of-type section h2 {
     text-transform: uppercase;
 }
 
-
-main section:first-of-type section a {
-    text-align: center;
-    border: none;
-    background-color: var(--header-background);
-    color: var(--color-text);
-    display: flex;
-    flex-direction: column;
-    border-radius: 2em;
-    padding: 0.7em 1em;
-    margin: 0 1em 0 1em;
-    width: 20em;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold
-}
-
-main section:first-of-type section article {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin-bottom: 1em;
-
-}
-
-main section:first-of-type article a:nth-of-type(2) {
-    background-color: var(--grey-link); 
-    color: var(--color-background); 
-}
-
-main>section:nth-of-type(3) h2 {
-    margin-left: 0.7em;
-    margin-top: 2em;
-    margin-bottom: 0.7em;
-    text-transform: uppercase;
-}
-
-
-
-main>section:nth-of-type(5) h2 {
-    margin-left: 0.7em;
-    margin-top: 2em;
-    text-transform: uppercase;
-}
-
-main>section:nth-of-type(3) a:nth-of-type(1) {
-    border: none;
-    background-color: var(--color-text);
-    color: var(--header-background);
-    border-radius: 2em;
-    padding: 0.7em 1em;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-left: 1em;
-}
-
-main>section:nth-of-type(3) a:nth-of-type(2) {
-    border: none;
-    background-color: var(--bg-color);
-    color: var(--color-text);
-    border-radius: 2em;
-    padding: 0.8em 1.1em;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-}
 
 main section:nth-of-type(2) h4 {
     font-weight: normal;
@@ -322,14 +224,8 @@ main section:nth-of-type(2) p {
     font-weight: bold;
 }
 
-main section:nth-of-type(6) img {
-    border-radius: 0.25em;
-    max-width: 25em;
-    max-height: 30em;
-}
 
-
-
+/* spreekt beide css aan en zorgt dat het tekst onder de afbeelding komt */
 main section:nth-of-type(2) ul li img,
 main section:nth-of-type(4) ul li img {
     order: -1;
@@ -338,49 +234,14 @@ main section:nth-of-type(4) ul li img {
 }
 
 
-main section:nth-of-type(5) ul li h3 {
-    position: absolute;
-    bottom: 0;
-    margin: 0 0 4em 1em;
-    color: var(--header-background);
-}
-
-
-main section:nth-of-type(5) li a {
-    background-color: var(--header-background);
-    color: var(--color-text);
-    text-decoration: none;
-    border-radius: 2em;
-    padding: 1em 2em;
-    position: absolute;
-    bottom: 0;
-    margin: 0 0 1em 1em;
-    text-transform: uppercase;
-    font-weight: bold
-}
-
-main section:nth-of-type(6) li a {
-    background-color: var(--header-background);
-    position: absolute;
-    color: var(--color-text);
-    text-decoration: none;
-    border-radius: 2em;
-    padding: 1em 1.2em;
-    bottom: 0;
-    margin: 0 0 1em 1em;
-    text-transform: uppercase;
-    font-weight: bold
-}
-
+/* werkt op beide pagina */
 main section ul li a {
     color: var(--color-text);
 }
 
-
 header nav:nth-of-type(1).toonMenu {
     translate: 0;
 }
-
 
 section:nth-of-type(3) li {
     display: flex;
@@ -399,18 +260,17 @@ section:nth-of-type(3) li>h4 {
     order: 600;
 }
 
-
 label select {
     font-size: 1rem;
     padding: 0.5rem;
     justify-content: center;
 }
 
-
 footer {
     padding: 2rem;
 }
 
+/* werkt op beide css en geeft bij de tweede heren html ook een border top */
 footer h3 {
     border-top: 0.0625em solid rgba(0, 0, 0, 0.1);
     padding-top: 1em;
@@ -420,62 +280,21 @@ footer section:nth-of-type(1) ul {
     flex-direction: column;
 }
 
-
 footer section:nth-of-type(4) details {
     display: none;
 }
-
-footer section:nth-of-type(4) ul {
-    display: flex;
-    gap: 1rem;
-    padding: 0;
-}
-
-
 
 footer section:nth-of-type(4) ul li {
     list-style-type: none;
     width: 100%;
 }
 
-footer section:nth-of-type(5) ul {
-    padding: 0 5em;
-    gap: 0.8em;
-}
-
-
-footer section:nth-of-type(4) ul li a img {
-    width: 100%;
-}
-
-footer section:nth-of-type(5) ul li a img{
-    max-width: 100%;
-}
-
-
-footer section:nth-of-type(5) {
-    width: 100%;
-}
-
-footer section:nth-of-type(6) {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center; /* Centreert de afbeeldingen */
-    gap: 0.8em;
-}
-
-footer > p:last-of-type {
+footer>p:last-of-type {
     text-align: center;
     margin: 0 auto;
     padding: 1em 0;
 }
 
-footer section:nth-of-type(6) img {
-    width: 3em; /* Fijne vaste breedte voor alle afbeeldingen */
-    height: 3em; /* Zorgt voor een vaste hoogte */
-    object-fit: contain; /* Zorgt ervoor dat de inhoud netjes binnen de img past */
-}
 
 footer ul {
     display: flex;
@@ -486,10 +305,6 @@ footer ul li {
     list-style-type: none;
 }
 
-footer ul li a {
-    text-decoration: none;
-    color: var(--color-text);
-}
 
 footer section:nth-of-type(4) li a {
     position: relative;
@@ -535,24 +350,11 @@ footer details ul li a {
 
 footer section summary {
     padding-top: 1em;
-    /* Ruimte boven de tekst */
     padding-bottom: 0.5em;
-    /* Ruimte onder de tekst */
 }
 
 footer section:nth-of-type(2) p:nth-of-type(6) {
     padding-bottom: 1em;
-}
-
-/* Zo moet het niet!!!!! 
-@media screen and (min-width: 786px) {
-    main section:nth-of-type(1) section h2 {
-        color: black;
-    }
-} */
-
-footer section:nth-of-type(4) img {
-    max-width: 100%;
 }
 
 footer section ul li {
@@ -572,33 +374,21 @@ footer section:nth-of-type(4) li a {
     color: var(--color-text);
 }
 
-footer section:nth-of-type(4) li a img {
-    width: 100%;
-    display: block;
-}
-
-footer section:nth-of-type(4) li a h3 {
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-    width: 100%;
-    padding: 0.7em 0;
-    /* Groeit mee met de breedte van de afbeelding */
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Transparante achtergrond */
-    color: var(--color-text);
-    font-size: small;
-    font-weight: 600;
-    text-transform: uppercase;
-    box-sizing: border-box;
-}
-
 /* NOTITIES: 
    Deze code zorgt dat Sanne aan mij hebt uitgelegd <3 zorgt voor een responsive navigatie die verandert op basis van schermgrootte!!!!
    - Nav 1: voor mobiel, begint buiten beeld en schuift in bij gebruik.
    - Nav 2: voor desktop, verborgen op kleinere schermen en toont als flex-rij bij bredere schermen.
 */
 @media (min-width: 48em) {
+    header button:first-of-type {
+        display: none;
+    }
+
+    header a:first-of-type {
+        margin: 0;
+        order: -1;
+    }
+
     /* Verberg het eerste nav (mobielmenu) */
     header nav:nth-of-type(1) {
         display: none;
@@ -618,12 +408,12 @@ footer section:nth-of-type(4) li a h3 {
     }
 
     header nav:nth-of-type(2) ul {
-		display:flex;
+        display: flex;
         flex-direction: row;
-		justify-content:center;
-		gap:.5em;
+        justify-content: center;
+        gap: .5em;
         order: 4;
-
+        padding: 0;
     }
 
     /* Style de items in het tweede nav */

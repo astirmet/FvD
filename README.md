@@ -33,11 +33,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Gymshark  
-  <img src="readme-images/beginpagina.png" width="375px" alt="omschrijving van de pagina">
+  <img src="./readme-images/beginpagina.png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Gymshark heren  
-  <img src="readme-images/tweedepagina.pngjpg" width="375px" alt="omschrijving van de pagina">
+  <img src="./readme-images/tweedepagina.png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
@@ -64,7 +64,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/Breakdown schets.pdf" width="375px" alt="breakdown van de hele pagina">
+  <img src="./readme-images/Breakdown schets.pdf" width="375px" alt="breakdown van de hele pagina">
 
 </details>
 
@@ -157,8 +157,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
-
+  De bevindingen hieraan zijn dat er aanpassingen zijn gemaakt in de alt-teksten, want die had je hiervoor niet. Het is nu ook volledig Nederlands gecodeerd, dus niet gemixt met andere talen. Oh, en er is nu darkmodus toegevoegd!
 </details>
 
 
@@ -222,7 +221,6 @@ Het lijkt bijna sprekend op de originele website, met hier en daar wat aanpassin
 
   Maar eerlijk gezegd geloof ik dat AI dit in de toekomst minder belangrijk zal maken, omdat AI-systemen dat soort problemen zelf kunnen oplossen. Maar goed, dat is een discussie die ik nu niet ga voeren, haha! ^^
  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:

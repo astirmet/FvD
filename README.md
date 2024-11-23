@@ -33,11 +33,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Gymshark  
-  <img src="./readme-images/beginpagina.png" width="375px" alt="omschrijving van de pagina">
+  <img src="./readme-images/beginpagina.png" width="375px" alt="screenshot thuispagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Gymshark heren  
-  <img src="./readme-images/tweedepagina.png" width="375px" alt="omschrijving van de pagina">
+  <img src="./readme-images/tweedepagina.png" width="375px" alt="screenshot herenpagina">
  
 </details>
 
@@ -64,7 +64,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="./readme-images/Breakdown schets.pdf" width="375px" alt="breakdown van de hele pagina">
+  <img src="./readme-images/breakdownschets.png" width="375px" alt="breakdown van de hele pagina">
 
 </details>
 
